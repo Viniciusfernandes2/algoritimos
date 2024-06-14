@@ -1,26 +1,26 @@
-
 import { LinkedList } from './bubble_sort';
 
 const list = new LinkedList<number>();
-list.insert(1);
-list.insert(5);
-list.insert(3);
-list.insert(2);
-list.insert(4);
+list.insert(64);
+list.insert(34);
+list.insert(25);
+list.insert(12);
+list.insert(22);
+list.insert(11);
+list.insert(90);
 
-console.log("Lista original:");
-displayList(list);
+console.log("Antes da ordenação:");
+let current = list.head;
+while (current) {
+    console.log(current.value);
+    current = current.next;
+}
 
-console.log("Ordenando lista...");
-list.bubbleSort();
+list.bubbleSortView();
 
-console.log("Lista ordenada:");
-displayList(list);
-
-function displayList(list: LinkedList<number>) {
-    let current = list.head;
-    while (current) {
-        console.log(current.value);
-        current = current.next;
-    }
+console.log("Depois da ordenação:");
+current = list.head;
+while (current) {
+    console.log(current.value);
+    current = current.next;
 }
